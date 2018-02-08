@@ -1,0 +1,14 @@
+//Install WhiteDB
+
+//Dentro de .tar.gz extraido:
+./configure
+sudo make
+sudo make install
+sudo ldconfig
+//Amplicar el uso de la memoria (100 MB)
+sudo sysctl kernel.shmmax=100000000
+//Añadir kernel.shmmax=100000000 a /etc/sysctl.conf para hacerlo permanente
+
+
+//Compile WhiteDB in C
+gcc -o a file.c -lwgdb
